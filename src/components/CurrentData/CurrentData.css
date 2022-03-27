@@ -1,0 +1,100 @@
+.current-data{
+    color: white;
+    background-color: #1a1c31;
+    flex-basis: 30%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: auto;
+    scrollbar-color: #2b2b2b #1d1d1d;
+}
+
+.current-data-data{
+    width: 100%;
+    animation: move-bg 240s linear infinite;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.current-data-data > .weather-code-image{
+    width: 60%;
+}
+
+.current-weather-code-name{
+    font-size: 1.2vw;
+}
+
+.current-location{
+    font-size: 1.8vw;
+    margin-block-start: 10vh;
+    margin-block-end: 1em;
+}
+
+.current-temperature{
+    font-size: 2.5vw;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.3em;
+}
+
+.current-day{
+    font-size: 1.2vw;
+}
+
+.clock{
+    font-size: 1.2vw;
+    height: 2.4vw;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #100e1d;
+}
+
+.current-date{
+    margin-bottom: 3vh;
+}
+
+@media only screen and (max-width: 1200px) {
+    .current-weather-code-name{
+        font-size: 1em;
+    }
+    .current-location{
+        font-size: 1.5em;
+    }
+    .current-temperature{
+        font-size: 2em;
+    }
+    .current-day{
+        font-size: 1em;
+    }
+    .clock{
+        font-size: 1em;
+        height: 2em;
+        border-radius: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .current-data-data > .weather-code-image{
+        width: 30%;
+    }
+    
+    .current-location{
+        margin-block-start: 1em;
+    }
+
+    .current-date{
+        margin-block-end: 1em;
+    }
+}
+
+@keyframes move-bg{
+    0%{
+        background-position: bottom 0px right 0px;
+    }
+    100%{
+        background-position: bottom 0px right 4000px;
+    }
+ }
